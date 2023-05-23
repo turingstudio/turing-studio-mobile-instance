@@ -8,6 +8,7 @@ class API {
   }
 
   static async getScreen(id) {
+    console.log(`Calling ${API_URL}/public/getScreen?id=${id}`)
     const data = await axios.get(`${API_URL}/public/getScreen?id=${id}`).then((result) => result.data.result)
     return data
   }
